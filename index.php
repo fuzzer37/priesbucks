@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="index.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+</head>
+<body background = "pries.png">
+
+<h1 align="center"> PriesBucks! </h1> 
+
+<nav>
+
+<div id="tableTop">
+
+<table align="center" cellpadding="1">
+<tr>
+<td>
+<a href = "1frontside.png">One PriesBuck bill</a>
+</td>
+
+
+<td>
+<a href = "5frontpries.png">Five PriesBuck bill</a>
+</td>
+
+<td>
+<a href = "10frontpries.png">Ten PriesBuck bill </a>
+</td>
+
+<td>
+<a href = "20frontpries.png">Twenty PriesBuck bill</a>
+</td>
+
+<td>
+<a href = "one dollar foo">Fifty PriesBuck bill</a>
+</td>
+
+<td>
+<a href = "100frontpries.png">One hundured PriesBuck Bill</a>
+</td>
+</tr>
+<tr>
+
+<td>
+<a href="1backside.png"> One PriesBuck Bill</a>
+</td>
+
+<td>
+<a href="5backpries.png"> Five PriesBuck Bill </a>
+</td>
+
+<td>
+<a href="10backpries.jpg"> Ten PriesBuck Bill </a>
+</td>
+
+<td>
+<a href="20backpries.png" > Twenty PriesBuck Bill </a>
+</td>
+
+<td>
+<a href=""> Fifty PriesBuck Bill </a>
+</td>
+
+<td>
+<a href="100backpries.png" > One hundred PriesBuck Bill </a>
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div id="tableSide"> 
+<table cellspacing="20" cellpadding="10"  >
+
+<tr>
+<td><a href="main.class">Get The offline Converter</td>
+</tr>
+
+<tr>
+<td><a href="main.java">Get The Code</td>
+</tr>
+
+<tr>
+<td>information</td>
+</tr>
+
+</table>
+</div>
+
+</nav>
+
+<div id="front1">
+<img src="1frontside.png" alt="The One Priesbuck Bill" />
+</div>
+
+<div id="back1">
+<img src="1backside.png" alt="The One Priesbuck Bill" />
+</div>
+
+<div id="front5">
+<img src="5frontpries.png" alt="The Five Priesbuck Bill" />
+</div>
+
+<div id="back5">
+<img src="5backpries.png" alt="The Five Priesbuck Bill" /> 
+</div>
+
+<div id="front10">
+<img src="10frontpries.png" alt="The Ten Priesbuck Bill" />
+</div>
+
+<div id="back10">
+<img src="10backpries.jpg" alt="The Ten Priesbuck Bill" />
+</div>
+
+<div id="front20">
+<img src="20frontpries.png" alt="The Twenty Priesbuck Bill" />
+</div>
+
+<div id="back20">
+<img src="20backpries.png" alt="The Twenty Priesbuck Bill" />
+</div>
+
+<div id="front100">
+<img src="100frontpries.png" alt="The One-Hundered Priesbuck Bill" />
+</div>
+
+<div id="back100">
+<img src="100backpries.png" alt="the One-hundered Priesbuck Bill" />
+</div>
+
+<div id="rate">
+<h1 align="center" color = "blue">
+The Exchange rate is
+<?php
+// Requested file
+// Could also be e.g. 'currencies.json' or 'historical/2011-01-01.json'
+$file = 'latest.json';
+$appId = '8bd92eef6b114368872dc2508b06df2a';
+
+// Open CURL session:
+$ch = curl_init("http://openexchangerates.org/api/{$file}?app_id={$appId}");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+// Get the data:
+$json = curl_exec($ch);
+curl_close($ch);
+
+// Decode JSON response:
+$exchangeRates = json_decode($json);
+
+$pries = $exchangeRates->rates->GBP;
+$exrate = $pries * 6;
+echo 'One USD is ' + $exrate + ' priesbucks';
+
+
+
+?>
+</h1>
+</div>
+
+</body>
+</html>
