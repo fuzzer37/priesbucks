@@ -1,6 +1,6 @@
 h1{
 color: silver;
-font-size: 6;
+font-size: 3;
 }
 #tableTop{
 		text-align: center;

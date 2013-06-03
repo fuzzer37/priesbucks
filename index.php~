@@ -7,7 +7,7 @@
 </head>
 <body background = "pries.png">
 
-<h1 align="center"> PriesBucks! </h1> 
+<h1 align="center" > PriesBucks! </h1> 
 
 <nav>
 
@@ -80,7 +80,7 @@
 </tr>
 
 <tr>
-<td>information</td>
+<td><a href="main.java">Get The Code</td>
 </tr>
 
 <tr>

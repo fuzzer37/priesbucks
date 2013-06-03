@@ -3,7 +3,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="index.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Untitled Document</title>
+<title>PriesBucks</title>
 </head>
 <body background = "pries.png">
 
@@ -84,7 +84,7 @@
 </tr>
 
 <tr>
-<td>information</td>
+<td><a href  = "/Prof"> Proficiency Stuff  </a></td>
 </tr>
 
 </table>
